@@ -1,10 +1,5 @@
 const readline = require('readline');
 
-function sortArray(array) {
-    return array.sort(function(a, b) {
-        return a - b;
-    });
-}
 
 function createAnswer() {
     const answerArray = [];
@@ -15,7 +10,7 @@ function createAnswer() {
         }
     }
 
-    return sortArray(answerArray);
+    return answerArray;
 }
 
 function hasDuplicateDigits(input) {
@@ -50,7 +45,6 @@ function playGame() {
             //input to array and sort
             input = input.split('');
             input = input.map((element) => parseInt(element));   
-            input = sortArray(input); 
             times++;
 
             if (input.length !== 4) {
